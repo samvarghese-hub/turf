@@ -1,0 +1,17 @@
+
+    
+
+
+table{
+    align-items: center;
+    border-collapse: collapse;
+      text-align: center;
+      display: inline-table;
+      display: -webkit-inline-box;
+}
+body{
+  background-color: beige;
+  background-image: url(./back.jpg);
+  
+  
+}

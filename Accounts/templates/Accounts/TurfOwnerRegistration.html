@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if messages %}
+        <ul>
+	        {% for message in messages %}
+	            <li>{{ message }}</li>
+	        {% endfor %}
+        </ul>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" style="border-collapse: collapse;" border="1" cellpadding="10">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="txtname"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input type="text" name="txtcontact"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="rdbGender" value="Male">Male
+                <input type="radio" name="rdbGender" value="Female">Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="txtemail"></td>
+        </tr>
+        <tr>
+            <td>District</td>
+            <td>
+                <select name="slctDistrict" id="slctDistrict" onchange="LoadPlace(this.value)">
+                    <option>---Select---</option>
+                    {% for data in  DistrictRecordSets%}
+                    
+                    <option value="{{ data.id }}">{{ data.district_name }}</option>
+                    
+                    {% endfor %}
+                    
+                    
+                
+                </select>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>Address</td>
+            <td><textarea name="txtAddress"></textarea></td>
+        </tr>
+     
+       
+            <td>Image</td>
+            <td><input type="file" name="fileImage" id="fileImage"></td>
+        </tr>
+        <tr>
+            <td>User name</td>
+            <td><input type="text" name="txtUsername" id="txtUsername"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="txtPassword" id="txtPassword"></td>
+        </tr>
+        <tr>
+            <td>Re-password</td>
+            <td><input type="text" name="txtrePassword" id="txtrePassword"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Register Now"></td>
+        </tr>
+    </table>
+    
+    </form>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

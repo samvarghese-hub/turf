@@ -1,0 +1,72 @@
+
+body{
+  background-image: url(./backgroundjpg.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.formholder{
+  max-width: 40%;
+  background-color: #000000a6;
+  margin: 20px auto;
+  border-radius: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.formholder h1{
+  font-weight: 800;
+  font-size: 35px;
+  text-align: center;
+  margin: 18px auto 50px auto;
+  color: white;
+}
+.input-class{
+    /* border: 2px solid black; */
+    padding: 5px 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: max-content;
+    align-content: center;
+    
+}
+.input-class input{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+}
+.btn{
+        border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px auto;
+      border-radius: 20px;
+      border: none;
+      background-color: green;
+      color: white;
+      font-weight: 600;
+      padding: 10px 12px;
+      cursor: pointer;
+      min-width: 100px;
+}
+.btn:focus{
+  outline: none;
+}
+.input-class p{
+      margin: 10px auto 3px 10px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+  
+}
+ .forgot{
+  align-content: flex-end;
+  color: black;
+
+}
